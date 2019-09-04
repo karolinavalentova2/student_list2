@@ -13,5 +13,17 @@ async function processStudentData() {
     }
 }
 
+function showStudentData() {
+    const studentListElement = document.getElementById('studentList');
+    const studentListEntryTemplate = document.getElementById('studentEntry');
 
+    studentData.forEach((studentEntry) => {
+        let temporaryStudentEntryTemplate = studentListEntryTemplate.content.cloneNode(true);
+
+        temporaryStudentEntryTemplate.childNodes[1].childNodes[1].textContent = studentEntry['fullname'];
+        temporaryStudentEntryTemplate.childNodes[1].childNodes[3].textContent = studentEntry['house'];
+
+        studentListElement.appendChild(temporaryStudentEntryTemplate);
+    })
+}
 
