@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Student list</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body onload="processStudentData().then(() => { showStudentData() })">
+
+<div id="studentList">
+    <!-- The student data goes here -->
+</div>
 
 </body>
+
+<template id="studentEntry">
+    <ul style="list-style-type:square;">
+        <li></li>
+        <li></li>
+    </ul>
+</template>
+
+<script src="main.js"></script>
 </html>
