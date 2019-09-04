@@ -92,6 +92,7 @@ body {
     margin-right: 50vw;
     box-shadow: 3px 4px 6px #444;
     border-radius: 6px;
+    text-align: center;
 }
 
 .close {
@@ -104,4 +105,12 @@ body {
 .close:hover {
     cursor: pointer;
     color: #0367FC;
+}
+
+/* modal image */
+
+#houseBanner {
+    width: 13vw;
+    margin-top: 3vw;
+    margin-left: 4vw;
 }
