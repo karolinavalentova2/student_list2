@@ -52,18 +52,16 @@ function sortByFirstName() {
     showStudentData(sortedArray);
 }
 
-// Filter by Gryffindor
-
-// function filterGryffindor() {
-//     let filteredArray = studentData.filter(['house']);
-//         if (filteredArray === 'Gryffindor') {
-//             deleteChilds(document.getElementById('studentList'));
-//             showStudentData(filteredArray);
-//         }
-// }
+// Filter house
 
 function filterBy(houseName) {
-    let filteredArray = studentData.filter(student =>  {return student['house'] === houseName} );
+    let filteredArray = [];
+
+    for(let i=0; i<studentData.length; i++) {
+        if(studentData[i]['house'] === houseName) {
+            filteredArray.push(studentData[i]);
+        }
+    }
 
     deleteChilds(document.getElementById('studentList'));
     showStudentData(filteredArray);
