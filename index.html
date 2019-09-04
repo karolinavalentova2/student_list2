@@ -13,17 +13,16 @@
         <div onclick="sortByFirstName()">First name</div>
         <div onclick="sortByLastName()">Last name</div>
         <div onclick="sortByHouse()">House</div>
-        <div onclick="showStudentData()">None</div>
     </div>
 </div>
 <div class="dropDown">
     <button class="sortByButton">Filter</button>
     <div style="list-style: none;" class="dropDown-content">
-        <div onclick="filterGryffindor()">Gryffindor</div>
-        <div onclick="filterRavenclaw()">Ravenclaw</div>
-        <div onclick="filterHufflepuff()">Hufflepuff</div>
-        <div onclick="filterSlytherin()">Slytherin</div>
-        <div onclick="filterShowAll()">Show all</div>
+        <div onclick="filterBy(this.textContent)">Gryffindor</div>
+        <div onclick="filterBy(this.textContent)">Ravenclaw</div>
+        <div onclick="filterBy(this.textContent)">Hufflepuff</div>
+        <div onclick="filterBy(this.textContent)">Slytherin</div>
+        <div onclick="processStudentData().then()">Show all</div>
     </div>
 </div>
 

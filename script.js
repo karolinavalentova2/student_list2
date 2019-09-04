@@ -41,8 +41,6 @@ function deleteChilds(parentElement) {
 
 // Sort by FIRST NAME
 
-
-
 function sortByFirstName() {
     let sortedArray = studentData.sort((a,b) => {
         if (a['fullname'] < b['fullname']) return -1;
@@ -52,4 +50,21 @@ function sortByFirstName() {
 
     deleteChilds(document.getElementById('studentList'));
     showStudentData(sortedArray);
+}
+
+// Filter by Gryffindor
+
+// function filterGryffindor() {
+//     let filteredArray = studentData.filter(['house']);
+//         if (filteredArray === 'Gryffindor') {
+//             deleteChilds(document.getElementById('studentList'));
+//             showStudentData(filteredArray);
+//         }
+// }
+
+function filterBy(houseName) {
+    let filteredArray = studentData.filter(student =>  {return student['house'] === houseName} );
+
+    deleteChilds(document.getElementById('studentList'));
+    showStudentData(filteredArray);
 }
