@@ -29,7 +29,15 @@ function showStudentData(studentsArray) {
     })
 }
 
+// Delete child
 
+function deleteChilds(parentElement) {
+    let child = parentElement.lastElementChild;
+    while (child) {
+        parentElement.removeChild(child);
+        child = parentElement.lastElementChild;
+    }
+}
 
 // Sort by FIRST NAME
 
