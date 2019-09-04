@@ -26,6 +26,15 @@
     </div>
 </div>
 
+<div class="modal" id="modal">
+    <div class="modalContent" id="modalContent">
+        <span class="close" onclick="document.getElementById('modal').style.display = 'none';">&times;</span>
+        <h2 id="modalStudentName"></h2>
+        <h2 id="modalStudentHouse"></h2>
+        <img alt="house banner" src="test.png" id="houseBanner">
+    </div>
+</div>
+
 <div id="studentList">
     <!-- The student data goes here -->
 </div>
@@ -33,7 +42,7 @@
 </body>
 
 <template id="studentEntry">
-    <ul style="list-style-type:square;">
+    <ul style="list-style-type:square;" onclick="showStudentModal(this.children)">
         <li></li>
         <li></li>
     </ul>

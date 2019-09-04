@@ -66,3 +66,39 @@ function filterBy(houseName) {
     deleteChilds(document.getElementById('studentList'));
     showStudentData(filteredArray);
 }
+
+// Modal
+
+function showStudentModal(studentDataElement) {
+    const clickedStudentName = studentDataElement[0].textContent;
+    const clickedStudentHouse = studentDataElement[1].textContent;
+    const modal = document.getElementById('modal');
+    const houseBanner = document.getElementById('houseBanner');
+
+    let modalColor;
+    let houseBannerSource;
+
+    document.getElementById('modalStudentName').textContent = clickedStudentName;
+    document.getElementById('modalStudentHouse').textContent = clickedStudentHouse;
+
+    if(clickedStudentHouse === 'Gryffindor'){
+        modalColor = 'thick solid #a34146';
+        houseBannerSource = './images/gryffindor.png';
+    }
+    if(clickedStudentHouse === 'Ravenclaw'){
+        modalColor = 'thick solid #27388f';
+        houseBannerSource = './images/ravenclaw.png';
+    }
+    if(clickedStudentHouse === 'Hufflepuff'){
+        modalColor = 'thick solid #baba2f';
+        houseBannerSource = './images/hufflepuff.png';
+    }
+    if(clickedStudentHouse === 'Slytherin'){
+        modalColor = 'thick solid #166335';
+        houseBannerSource = './images/slytherin.png';
+    }
+
+    houseBanner.src = houseBannerSource;
+    modal.children[0].style.border = modalColor;
+    modal.style.display = 'block';
+}
