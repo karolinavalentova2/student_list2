@@ -5,12 +5,12 @@
     <title>Student list</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body onload="processStudentData().then(() => { showStudentData() })">
+<body onload="processStudentData().then()">
 
 <div class="dropDown">
     <button class="sortByButton">Sort by</button>
     <ul style="list-style: none;" class="dropDown-content">
-        <li onclick="byFirstName()">First name</li>
+        <li onclick="sortByFirstName()">First name</li>
         <li onclick="byLastName()">Last name</li>
         <li onclick="byHouse()">House</li>
     </ul>
