@@ -52,6 +52,32 @@ function sortByFirstName() {
     showStudentData(sortedArray);
 }
 
+// Sort by last name
+
+function sortByLastName() {
+    let sortedArray = studentData.sort((a,b) => {
+        if (a['fullname'] > b['fullname']) return -1;
+        if (a['fullname'] < b['fullname']) return 1;
+        return 0;
+    });
+
+    deleteChilds(document.getElementById('studentList'));
+    showStudentData(sortedArray);
+}
+
+// Sort by house
+
+function sortByHouse() {
+    let sortedArray = studentData.sort((a,b) => {
+        if (a['house'] < b['house']) return -1;
+        if (a['house'] > b['house']) return 1;
+        return 0;
+    });
+
+    deleteChilds(document.getElementById('studentList'));
+    showStudentData(sortedArray);
+}
+
 // Filter house
 
 function filterBy(houseName) {
